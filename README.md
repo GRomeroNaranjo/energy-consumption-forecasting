@@ -21,6 +21,9 @@ This unique architecture had two multi-perceptron layers, one attention mechanis
 
 The first multi-perceptron layer serves as an initial processing. It has the dimensions of (100, 60, 120), all of which extract the initial sequence to a more complex detailed tensor. Then, the attention mechanism essentially gets this sequence, and runs it through a compilation of blocks that turn it into a matrix that knows the detailed relationships between each value, allowing it to capture more long-term information. Then, the multi-perceptron layer gets these attention values, and runs them through a final processing layer, that has the dimensions of (120, 80, 60).  Finally, the final linear turns this matrix into one single value, serving as the output, or the final prediction. To the bottom you will find a more detailed explanation on how every layer works below:​
 
+<img width="731" alt="Screenshot 2025-01-27 at 17 20 55" src="https://github.com/user-attachments/assets/2fffb411-6b31-437c-8526-13c2ba5903ad" />
+
+
 ## Multi-Perceptron-Layer
 The multi-perceptron layer works by setting random values, and then multiplying these values by the inputs sequentially, producing a final output, then the difference is found between these, and this value is called the loss. A loss that needs to be minimized. Subsequently, we find the derivative of the loss with respect to every single variable, multiply it by a stable learning rate, and subtract this loss from the number, allowing the model to perform calculations that produce a lower loss, or more accurate results. This essentially works for the whole model, the loss is back propagated since the output of one layer is the input of another, so by finding the derivative of the input, you get the output for the last layer, and this can be used as the loss for the calculus  of the previous layer. Please find the mathematical details below, with a simple example of inputs and outputs. The diagram to the left is the forward propagation, while the one to the left is the backward propagation​
 
@@ -30,14 +33,15 @@ The multi-perceptron layer works by setting random values, and then multiplying 
 ## Layer-Normalization
 This complex architecture deals with many values, and layers. Subsequently, it is very prone to suffer from exploding gradients, or noisy data, in order to fix this, the model will leverage “Layer Normalization” to stabilize the values. This layer is typically employed on large language models. Find the mathematical formula for it:​
 
+<img width="369" alt="Screenshot 2025-01-27 at 17 21 30" src="https://github.com/user-attachments/assets/6c7b8d44-fc34-4288-8cad-8d0a0c494388" />
+
 ​Layer normalization works differently than typical normalization techniques. In essence, layer normalization takes the mean of the array, and subtracts every value by it. Then it divides it by the square root of the standard deviation squared plus epsilon. This value is then multiplied and added by learnable parameters, giving the layer normalization a chance to adapt to the data and model, making this commendable.​
 
 ## Attention Mechanism
 The attention mechanism it one of the most critical parts of the entire model, it provides the model with the ability to capture long term relationships, helping it see how different values relate. Essentially, the attention mechanism gets the values and runs them through three different linear layers, producing the queries, keys, and values. After this the transposed keys undergo matrix multiplication with the values, creating the scores. The scores get scaled and then go through a softmax activation function. Then these processed scores undergo matrix multiplication with the values, producing an array with the same dimensions as the initial input. Finally, this array goes through a linear layer for final processing. Find it to the right​
 
+ <img width="616" alt="Screenshot 2025-01-27 at 17 21 58" src="https://github.com/user-attachments/assets/878960ff-a350-45c8-9aac-29582980d32f" />
 ​
-
- ​
 
 ​
 
