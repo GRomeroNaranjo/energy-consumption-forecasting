@@ -14,7 +14,6 @@ In order to test the success of my unique architecture, I developed the model th
 <img width="1468" alt="Screenshot 2025-01-27 at 00 08 42" src="https://github.com/user-attachments/assets/f865a7c1-bfb2-46d9-a018-50297d596b47" />
 <img width="1470" alt="Screenshot 2025-01-27 at 00 09 30" src="https://github.com/user-attachments/assets/cf9cd434-2726-485d-b36b-007a54ef9820" />
 
-
 ## How it works
 ​Essentially, this model works through a modification of the decoder transformer architecture (GPT) originally introduced through machine learning leaders; OpenAI. However, this model was typically applied against language modelling, and could overfit simpler data, like energy consumption. Subsequently, I have changed the model into a more unique architecture, adapted to apply to this specific dataset. ​
 
@@ -24,7 +23,9 @@ The first multi-perceptron layer serves as an initial processing. It has the dim
 
 ## Multi-Perceptron-Layer
 The multi-perceptron layer works by setting random values, and then multiplying these values by the inputs sequentially, producing a final output, then the difference is found between these, and this value is called the loss. A loss that needs to be minimized. Subsequently, we find the derivative of the loss with respect to every single variable, multiply it by a stable learning rate, and subtract this loss from the number, allowing the model to perform calculations that produce a lower loss, or more accurate results. This essentially works for the whole model, the loss is back propagated since the output of one layer is the input of another, so by finding the derivative of the input, you get the output for the last layer, and this can be used as the loss for the calculus  of the previous layer. Please find the mathematical details below, with a simple example of inputs and outputs. The diagram to the left is the forward propagation, while the one to the left is the backward propagation​
-​
+​<img width="419" alt="Screenshot 2025-01-27 at 11 29 45" src="https://github.com/user-attachments/assets/b6a0f4fb-0ab9-4da9-af60-787b43235ccf" />
+<img width="760" alt="Screenshot 2025-01-27 at 11 37 41" src="https://github.com/user-attachments/assets/73e6a28a-8da5-4cae-b4e9-40860270dfa9" />
+
 ## Layer-Normalization
 This complex architecture deals with many values, and layers. Subsequently, it is very prone to suffer from exploding gradients, or noisy data, in order to fix this, the model will leverage “Layer Normalization” to stabilize the values. This layer is typically employed on large language models. Find the mathematical formula for it:​
 
