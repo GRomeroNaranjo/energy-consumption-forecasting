@@ -1,5 +1,5 @@
 # Energy-Consumption-Forecasting
-By leveraging state-of-the-art deep learning techniques this project aims at predicting energy consumption for PJM, a major energy company in the United States. ​
+By leveraging state-of-the-art deep learning techniques this project aims at predicting energy consumption for PJM, a major energy company in the United States. (Note that this is the exact same content as on the poster, thank you)
 
 ## Why it matters?
 Currently, 85% of energy is provided through the use of non-renewable energy sources. Thus producing extensive amounts of carbon dioxide, influencing the environment negatively. This carbon dioxide effectively captures the ultra violet light, keeping it within the atmosphere and increasing heat. This leads into many further impacts such as wildfires, droughts, habitat loss, etc. All of which ultimately impact humanity, and our ecosystems posing a concerning issue. ​
