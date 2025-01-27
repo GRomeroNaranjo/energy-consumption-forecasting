@@ -11,8 +11,8 @@ Providing governments, and officials to plan the integration of renewable energy
 ## Results
 In order to test the success of my unique architecture, I developed the model through python and PyTorch, both of which are popular choices in machine learning. I have decided to test it on training data with only 5000 data points in order to effectively test its ability to capture complex patterns with little data. Furthermore, I trained a separate model on the full extent of the training data to make predictions on values that it has never seen before, providing it with the opportunity to showcase how it applies its learned patterns to real non-seen data, serving as a more accurate indicator of the precision of the model. (As evident the model does exceptionally well when forecasting both training data and testing data, proving the reliability of the model.)​
 
-<img width="400" height="400" alt="Screenshot 2025-01-27 at 00 08 42" src="https://github.com/user-attachments/assets/f865a7c1-bfb2-46d9-a018-50297d596b47" />
-<img width="400" height="400" alt="Screenshot 2025-01-27 at 00 09 30" src="https://github.com/user-attachments/assets/cf9cd434-2726-485d-b36b-007a54ef9820" />
+<img width="450" height="250" alt="Screenshot 2025-01-27 at 00 08 42" src="https://github.com/user-attachments/assets/f865a7c1-bfb2-46d9-a018-50297d596b47" />
+<img width="450" height="250" alt="Screenshot 2025-01-27 at 00 09 30" src="https://github.com/user-attachments/assets/cf9cd434-2726-485d-b36b-007a54ef9820" />
 
 ## How it works
 ​Essentially, this model works through a modification of the decoder transformer architecture (GPT) originally introduced through machine learning leaders; OpenAI. However, this model was typically applied against language modelling, and could overfit simpler data, like energy consumption. Subsequently, I have changed the model into a more unique architecture, adapted to apply to this specific dataset. ​
