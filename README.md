@@ -24,8 +24,8 @@ The first multi-perceptron layer serves as an initial processing. It has the dim
 ## Multi-Perceptron-Layer
 The multi-perceptron layer works by setting random values, and then multiplying these values by the inputs sequentially, producing a final output, then the difference is found between these, and this value is called the loss. A loss that needs to be minimized. Subsequently, we find the derivative of the loss with respect to every single variable, multiply it by a stable learning rate, and subtract this loss from the number, allowing the model to perform calculations that produce a lower loss, or more accurate results. This essentially works for the whole model, the loss is back propagated since the output of one layer is the input of another, so by finding the derivative of the input, you get the output for the last layer, and this can be used as the loss for the calculus  of the previous layer. Please find the mathematical details below, with a simple example of inputs and outputs. The diagram to the left is the forward propagation, while the one to the left is the backward propagation​
 
-​<img width="419" height="250" alt="Screenshot 2025-01-27 at 11 29 45" src="https://github.com/user-attachments/assets/b6a0f4fb-0ab9-4da9-af60-787b43235ccf" />
-<img width="419" height="250" alt="Screenshot 2025-01-27 at 11 37 41" src="https://github.com/user-attachments/assets/73e6a28a-8da5-4cae-b4e9-40860270dfa9" />
+​<img width="419" height="300" alt="Screenshot 2025-01-27 at 11 29 45" src="https://github.com/user-attachments/assets/b6a0f4fb-0ab9-4da9-af60-787b43235ccf" />
+<img width="419" height="300" alt="Screenshot 2025-01-27 at 11 37 41" src="https://github.com/user-attachments/assets/73e6a28a-8da5-4cae-b4e9-40860270dfa9" />
 
 ## Layer-Normalization
 This complex architecture deals with many values, and layers. Subsequently, it is very prone to suffer from exploding gradients, or noisy data, in order to fix this, the model will leverage “Layer Normalization” to stabilize the values. This layer is typically employed on large language models. Find the mathematical formula for it:​
